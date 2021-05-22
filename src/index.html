@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" style="background-color: #bcbcbc;">
+    <head>
+        <meta charset="UTF-8">
+        <title>Pix-L SortR</title>
+        <link rel="icon" type="image/png" href="img/icon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Toby Butchart">
+        <meta name="description" content="JavaScript Pixel sorter">
+        <link href='http://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.min.css">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/kontrol.min.js"></script>
+    </head>
+    <body style="background-color: #bcbcbc;">
+        <div id="loading">
+            <img id="loading-image" src="img/loading.gif" alt="Loading..."/>
+        </div>
+        <div class="container" id="mainContainer">
+            <div class="row" id="mainRow">
+                <div class="col-sm-12" id="mainCol">
+                    <h1 style="font-family: VT323; color: #134993; font-size: 66px;">Pix-L SortR</h1>
+                    <div class="form-group">
+                        <input type="file" name="img[]" class="file" style="display: none;" onchange="process(this);">
+                        <div class="input-group col-xs-12">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span>
+                            <input type="text" class="form-control input-lg" disabled placeholder="Upload Image" onchange="" hidden>
+                            <span class="input-group-btn">
+                                <button class="browse btn btn-primary input-lg" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="" id="vertical" onchange="start();">Vertical
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="" id="invert" onchange="start();">Invert
+                        </label>
+                    </div>
+                    <!-- <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="" id="draw" onchange="initDraw(document.getElementById('b'));">Draw Boundary
+                        </label>
+                    </div> -->
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    Threshold
+                    <input type="range" id="threshold" class="dial" min="0" max="100" value="50" onmouseup="start()" ontouchend="start()">
+                </div>
+                <div class="col-xs-12">
+                    <hr>
+                    <canvas id="b" class="img-responsive"></canvas>
+                    <hr>
+                    <div class="form-group">
+                        <div class="input-group col-xs-12">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span>
+                            <input type="text" id="saveName" class="form-control input-lg" placeholder="Save Image" hidden>
+                            <span class="input-group-btn">
+                                <button class="browse btn btn-primary input-lg" type="button" onclick="downloadImage(document.getElementById('saveName').value);"><i class="glyphicon glyphicon-floppy-disk"></i> Save</button>
+                                <a id="downloadMe" download="YourFileName.jpg"></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/script.js"></script>
+        <script>
+            // document.getElementById("loading").style.display = "none";
+
+        </script>
+    </body>
+</html>

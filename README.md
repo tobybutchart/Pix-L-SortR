@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="res/sorted.jpg" alt="Castle Quilldore">
+    <img src="res/sorted.jpg" alt="Pix-L-SortRe">
 </p>
 <h3 align="center">Pix-L SortR</h3>
 <hr>
@@ -26,3 +26,7 @@ Date | Issue | Status |
 22/05/2021 | Change download to multiple file types | incomplete |
 22/05/2021 | Add shape cuts to output | incomplete |
 22/05/2021 | Draw shape cuts to canvas | incomplete |
+
+<p align="center">
+    <img src="res/sorted.gif" alt="Pix-L-SortRe">
+</p>
